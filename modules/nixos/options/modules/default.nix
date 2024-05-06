@@ -3,6 +3,7 @@
 in {
   options.my.modules = {
     iso = mkEnableOption "ISO";
+    server = mkEnableOption "Server";
     headless = mkEnableOption "Headless";
     graphical = mkEnableOption "Graphical";
     workstation = mkEnableOption "Workstation";

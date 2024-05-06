@@ -1,7 +1,8 @@
 {
   my.modules = {
     iso = false;
-    headless = false;
+    headless = true;
+    server = true;
     graphical = false;
     workstation = false;
     laptop = false;

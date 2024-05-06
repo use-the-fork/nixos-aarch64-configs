@@ -59,16 +59,9 @@
       inputs.treefmt-nix.flakeModule
     ];
 
-    home.users."nerd@ScatNode1".modules = with inputs; [
-      hyprland.homeManagerModules.default
-      hypridle.homeManagerModules.hypridle
-      sops-nix.homeManagerModules.sops
-      snowfall-lib.homeModules.user
-    ];
-
     systems.modules.nixos = with inputs; [
       #pins stave version across all systems
-      ({lib, ...}: {system.stateVersion = lib.my.stateVersion.nixos;})
+      ({lib, ...}: {system.stateVersion = "24.05";})
 
       home-manager.nixosModules.home-manager
 

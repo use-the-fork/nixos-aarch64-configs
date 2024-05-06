@@ -1,5 +1,6 @@
 {lib, ...}: let
   inherit (lib) mkEnableOption mkOption types;
+  inherit (lib.my) mkModule;
 in {
   options.my.system = {
     services = {
@@ -14,6 +15,11 @@ in {
           '';
         };
       };
+
+		home-assistant = mkModule {
+		  name = "Home Assistant";
+		  port = 8123;
+		};
 
       #
       #      nginx = mkModule {

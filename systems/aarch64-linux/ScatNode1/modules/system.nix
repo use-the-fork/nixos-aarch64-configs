@@ -29,5 +29,9 @@
       lockModules = true;
       auditd.enable = true;
     };
+
+    services = {
+    	home-assistant.enable = true;
+    };
   };
 }

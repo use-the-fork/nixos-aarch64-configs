@@ -13,6 +13,7 @@ in {
       raspberrypi-eeprom
       git
       neovim
+      tree
     ];
 
     hardware = {
@@ -44,6 +45,5 @@ in {
 
     console.enable = false;
 
-    system.stateVersion = "23.11";
   };
 }
