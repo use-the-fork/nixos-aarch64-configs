@@ -1,6 +1,9 @@
 {pkgs, ...}: let
   keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICDSw8KwWzGDDks1fHSiuJO915PDXYdgKHpj+4+6XYrW nerd@jupiter"
+      # Ubuntu key
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAXXUIUO43Ta9R0vdYb8mRxh1tGpD8b5ExnE3y8XwuCV nurd"
+      # NixOS key
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOAMRygHsDzFOKXtfuiufsRiLtg4Er4R8cElBB9p/etk nerd"
   ];
 in {
   config = {
@@ -25,7 +28,7 @@ in {
     users.users.nerd = {
       isNormalUser = true;
       shell = pkgs.zsh;
-      initialPassword = "changeme";
+      hashedPassword = "$6$ajR1NvGqtfgQJK1P$uexjrejIRcZsy2u2HZr.ZZ26nTLcRFy1lmRl591LxUyxdHvb.VBSQ.ndFEsczTO>";
       openssh.authorizedKeys.keys = keys;
       extraGroups = [
         "wheel"

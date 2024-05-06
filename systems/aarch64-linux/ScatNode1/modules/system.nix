@@ -1,6 +1,6 @@
 {
   config.modules.system = {
-    mainUser = "notashelf";
+    mainUser = "nerd";
     fs = ["ext4" "vfat" "ntfs" "exfat"];
     autoLogin = false;
 
@@ -22,15 +22,9 @@
     networking = {
       optimizeTcp = true;
       nftables.enable = true;
-      tailscale = {
-        enable = true;
-        isClient = true;
-        isServer = false;
-      };
     };
 
     security = {
-      tor.enable = true;
       fixWebcam = false;
       lockModules = true;
       auditd.enable = true;
