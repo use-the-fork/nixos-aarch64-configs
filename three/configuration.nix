@@ -26,7 +26,7 @@
   #  kernelPackages = pkgs.linuxPackages_rpi4; # Mainline doesn't work yet
   #};
 
-  networking.hostName = "poop1"; # Define your hostname.
+  networking.hostName = "poop3"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -104,22 +104,6 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
-  # Home Assistant - https://nixos.wiki/wiki/Home_Assistant
-  services.home-assistant = {
-   enable = true;
-   extraComponents = [
-      Components required to complete the onboarding
-     "esphome"
-     "met"
-     "radio_browser"
-   ];
-   config = {
-      # Includes dependencies for a basic setup
-      # https://www.home-assistant.io/integrations/default_config/
-     default_config = {};
-   };
-  };
-
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
@@ -150,3 +134,4 @@
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#op>
   system.stateVersion = "24.05"; # Did you read the comment?
 }
+
